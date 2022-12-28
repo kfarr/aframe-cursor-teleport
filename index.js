@@ -156,7 +156,7 @@ AFRAME.registerComponent('cursor-teleport', {
     } else {
       if (!this.collisionMesh) {
         // if no collision entities are specified, create a default ground plane collision.
-        const geo = new THREE.PlaneGeometry(50, 50, 1);
+        const geo = new THREE.PlaneGeometry(500, 500, 1);
         geo.rotateX(-Math.PI / 2);
         const mat = new THREE.MeshNormalMaterial();
         const collisionMesh = new THREE.Mesh(geo, mat);
