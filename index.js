@@ -291,8 +291,8 @@ AFRAME.registerComponent('cursor-teleport', {
       const value =
         easeInOutTransitionProgress < 0.5
           ? easeInOutTransitionProgress
-          : 0.5 - 1 * (easeInOutTransitionProgress - 0.5);
-      this.teleportIndicator.scale.set(0.5 + value, 1, 0.5 + value);
+          : 1.5 - 1 * (easeInOutTransitionProgress + 0.5);
+      this.teleportIndicator.scale.set(1 + value, 1, 1 + value);
 
       // set camera position
       const camPos = this.camRig.position;
